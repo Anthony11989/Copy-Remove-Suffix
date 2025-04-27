@@ -1,15 +1,47 @@
-
 // index.js
+require('dotenv').config(); // <-- Add this to load your .env file
 const express = require('express');
 const bodyParser = require('body-parser');
+const axios = require('axios'); // <-- Add axios for making API requests
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const MONDAY_API_URL = "https://api.monday.com/v2";
+const MONDAY_API_KEY = process.env.MONDAY_API_KEY;
+
+// Helper function to update the Name column
+async function updateNameColumn(itemId, newName) {
+    const query = `
+        mutation {
+            change_simple_column_value(
+                item_id: ${itemId},
+                column_id: "name",
+                value: "${newName}"
+            ) {
+                id
+            }
+        }
+    `;
+
+    try {
+        const response = await axios.post(MONDAY_API_URL, { query }, {
+            headers: {
+                Authorization: MONDAY_API_KEY,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log("✅ Successfully updated Name:", response.data);
+    } catch (error) {
+        console.error("❌ Error updating Name column:", error.response?.data || error.message);
+    }
+}
+
 // Parse JSON bodies
 app.use(bodyParser.json());
 
-app.post('/webhook', (req, res) => {
+app.post('/webhook', async (req, res) => {
     console.log('Received Webhook:', JSON.stringify(req.body, null, 2));
 
     // Monday.com webhook verification (respond with challenge)
@@ -21,6 +53,18 @@ app.post('/webhook', (req, res) => {
     const event = req.body.event;
     if (event) {
         console.log('Event received from Monday.com:', event);
+
+        // Handle 'create_pulse' events
+        if (event.type === 'create_pulse') {
+            const originalName = event.pulseName || '';
+            const cleanedName = originalName.replace(/\s*\(copy\)/i, '').trim();
+            const itemId = event.pulseId;
+
+            if (originalName !== cleanedName) {
+                console.log(`🔧 Cleaning name from "${originalName}" to "${cleanedName}"`);
+                await updateNameColumn(itemId, cleanedName);
+            }
+        }
     }
 
     res.status(200).send('OK');
@@ -31,5 +75,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
+    console.log(`🚀 Server is listening on port ${PORT}`);
 });
