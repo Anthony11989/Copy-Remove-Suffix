@@ -11,10 +11,11 @@ const MONDAY_API_URL = "https://api.monday.com/v2";
 const MONDAY_API_KEY = process.env.MONDAY_API_KEY;
 
 // Helper function to update the Name column
-async function updateNameColumn(itemId, newName) {
+async function updateNameColumn(boardId, itemId, newName) {
     const query = `
         mutation {
             change_simple_column_value(
+                board_id: ${boardId},
                 item_id: ${itemId},
                 column_id: "name",
                 value: "${newName}"
@@ -59,12 +60,14 @@ app.post('/webhook', async (req, res) => {
             const originalName = event.pulseName || '';
             const cleanedName = originalName.replace(/\s*\(copy\)/i, '').trim();
             const itemId = event.pulseId;
-
+            const boardId = event.boardId;
+        
             if (originalName !== cleanedName) {
                 console.log(`🔧 Cleaning name from "${originalName}" to "${cleanedName}"`);
-                await updateNameColumn(itemId, cleanedName);
+                await updateNameColumn(boardId, itemId, cleanedName);
             }
         }
+        
     }
 
     res.status(200).send('OK');
