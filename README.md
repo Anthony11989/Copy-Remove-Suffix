@@ -114,3 +114,9 @@ f. MAKE SURE YOU ADD IN /copyremove at the end of the URL you pasted into the mo
 g. Start Automation 
 
 H. ALL DONE!
+
+## 🎉 Support My Work
+
+If you'd like to support this project, you can [Donate via Stripe](https://donate.stripe.com/8wMaGZasG52o2gobII)!
+
+[![Donate](https://img.shields.io/badge/Donate-Stripe-blue.svg)](https://donate.stripe.com/8wMaGZasG52o2gobII)
