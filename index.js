@@ -42,7 +42,7 @@ async function updateNameColumn(boardId, itemId, newName) {
 // Parse JSON bodies
 app.use(bodyParser.json());
 
-app.post('/webhook', async (req, res) => {
+app.post('/copyremove', async (req, res) => {
     console.log('Received Webhook:', JSON.stringify(req.body, null, 2));
 
     // Monday.com webhook verification (respond with challenge)
