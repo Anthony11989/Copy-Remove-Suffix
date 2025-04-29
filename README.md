@@ -64,12 +64,15 @@ a. In Visual Studio Code... since its the first time to upload in your repositor
 
 b. If done properly, UPON REFRESHING YOUR BROWSER your repository should now retain all files uploaded.
 
-## 2. Create a Render Account at [Render](https://render.com/).
+## 8. Create a Render Account at [Render](https://render.com/).
 a. Create a Web Service
 
+b. Connect your GitHub account to Render
 
-## 3. Parameters for Render Web Service
-a. Name - leave as is
+c. Select your repository (the one with your newly uploaded files)
+
+## 9. Parameters for Render Web Service
+a. Name - change it to something unique
 
 b. Project - disregard
 
@@ -91,6 +94,23 @@ j. Enviroment Variables - disregard
 
 k. Advanced - disregard
 
-4. Deploy Web Service
+l. Deploy Web Service
 
-4. Use the `/copyremove` endpoint for Monday.com webhook integration.
+m. MOST IMPORTANT STEP! once your server is live near the top you should see something like this (depending on the name you gave it) https://copy-remove-suffix.onrender.com. Copy this down you will need this in the next step.
+
+## 10. Use the `/copyremove` in your webhook.
+a. In Monday.com open your automations
+
+b. Click "Templates" at the top of the automations pop-up
+
+c. Search "Webhook" and click the big purple box that says "webhooks"
+
+d. Choose "When item is created, send a webhook"
+
+e. Paste in your server name from Render.com. You can find it under the Events > right under your Git Hub account information. 
+
+f. MAKE SURE YOU ADD IN /copyremove at the end of the URL you pasted into the monday.com webhook automation.
+
+g. Start Automation 
+
+H. ALL DONE!
