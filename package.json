@@ -1,7 +1,7 @@
 {
-  "name": "monday-webhook-server",
+  "name": "monday-copy-remove",
   "version": "1.0.0",
-  "description": "A simple webhook server for Monday.com",
+  "description": "A simple webhook server to remove (copy) suffix for Monday.com",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
