@@ -54,6 +54,15 @@ e. Copy the API key and paste it after the "=" sign in the .env file. (make sure
 f. Save the file by clicking save under files or Ctrl + S
 
 ## 7. Upload into your own Private GitHub Repository
+a. In Visual Studio Code... since its the first time to upload in your repository follow the code below.
+
+    git init
+    git branch -M main
+    git commit -m "Monday copy remove"
+    git remote add origin https://github.com/YourGitHubUsername/NameofRepository.git
+    git push -u origin main
+
+b. If done properly, UPON REFRESHING YOUR BROWSER your repository should now retain all files uploaded.
 
 ## 2. Create a Render Account at [Render](https://render.com/).
 a. Create a Web Service
