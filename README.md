@@ -9,8 +9,12 @@ If you'd like to support this project, you can [Donate via Stripe](https://donat
 # Monday.com Webhook Server
 
 THIS GITHUB REPOSITORY IS FREE TO USE YOU'LL NEED TO START YOUR OWN REPOSITORY TO UPDATE THE .ENV FOR YOUR MONDAY.COM API KEY.
+
 This is a Node.js server to handle webhooks from Monday.com.
-It verifies the challenge during webhook setup and logs incoming webhook events.                                     Final action is to remove (copy) suffix from duplicated items.
+
+It verifies the challenge during webhook setup and logs incoming webhook events.                                     
+
+Final action is to remove (copy) suffix from duplicated items.
 
 ## Usage
 
