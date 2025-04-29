@@ -14,10 +14,10 @@ It verifies the challenge during webhook setup and logs incoming webhook events.
 
 ## Usage
 
-1. Go to [Visual Studio Code](https://code.visualstudio.com/) and download this program.
+## 1. Go to [Visual Studio Code](https://code.visualstudio.com/) and download this program.
 a. Basic download just run through the prompt... do not add any other features.
 
-2. Navigate to [GitHub](https://github.com/) and create an account.
+## 2. Navigate to [GitHub](https://github.com/) and create an account.
 a. Create a new repository by clicking your icon on the upper right page, click repository, click new (green button)
 b. MAKE THIS PRIVATE it will contain your Monday.com API later in the tutorial.
     
