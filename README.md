@@ -16,6 +16,10 @@ It verifies the challenge during webhook setup and logs incoming webhook events.
 
 Final action is to remove (copy) suffix from duplicated items.
 
+YOUTUBE VIDEO
+
+[Watch how its done start to finish](https://youtu.be/2BKrJT5R1Bg)
+
 ## Usage
 
 ## 1. Go to [Visual Studio Code](https://code.visualstudio.com/) and download this program.
