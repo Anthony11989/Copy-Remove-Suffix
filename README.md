@@ -18,7 +18,7 @@ It verifies the challenge during webhook setup and logs incoming webhook events.
 a. Basic download just run through the prompt... do not add any other features.
 
 ## 2. Navigate to [GitHub](https://github.com/) and create an account.
-a. Create a new repository by clicking your icon on the upper right page, click repository, click new (green button)
+a. Create a new repository by clicking your icon on the upper right page, click repository, click new (green button). Name the repository whatever you want, if the name is available...
 
 b. MAKE THIS PRIVATE it will contain your Monday.com API later in the tutorial.
 
