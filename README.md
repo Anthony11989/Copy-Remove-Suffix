@@ -1,8 +1,9 @@
-## ☕ Support My Work
+## 🎉 Support My Work
 
-If you'd like to support this project, you can [Buy Me a Coffee](https://buymeacoffee.com/yourusername)!
+If you'd like to support this project, you can [Donate via Stripe](https://donate.stripe.com/8wMaGZasG52o2gobII)!
 
-[![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20a%20Coffee-yellow.svg)](https://buymeacoffee.com/yourusername)
+[![Donate](https://img.shields.io/badge/Donate-Stripe-blue.svg)](https://donate.stripe.com/8wMaGZasG52o2gobII)
+
 
 
 # Monday.com Webhook Server
