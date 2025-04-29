@@ -19,14 +19,18 @@ a. Basic download just run through the prompt... do not add any other features.
 
 ## 2. Navigate to [GitHub](https://github.com/) and create an account.
 a. Create a new repository by clicking your icon on the upper right page, click repository, click new (green button)
-b. MAKE THIS PRIVATE it will contain your Monday.com API later in the tutorial.
-    
-3. Download Git to your pc [Git for Windows](https://git-scm.com/downloads/win) | [Git for Mac](https://git-scm.com/downloads/mac)
 
-4. Configure Git
+b. MAKE THIS PRIVATE it will contain your Monday.com API later in the tutorial.
+
+## 3. Download Git to your pc [Git for Windows](https://git-scm.com/downloads/win) | [Git for Mac](https://git-scm.com/downloads/mac)
+
+## 4. Configure Git
 a. Open Visual Studio Code and a Terminal (tab can be found at the top of the program)
+
 b. Run these commands (use your full name and registered email address on GitHub.com)
+   
     git config --global user.name "ENTER IN YOUR NAME"
+    
     git config --global user.email "YOUR@EMAIL.COM"
 
 2. Create a Render Account at [Render](https://render.com/).
