@@ -37,6 +37,7 @@ b. Run these commands (use your full name and registered email address on GitHub
 a. On your computer wherever you want to store this code and files for modifications this is where you need to do so... I have mine in my Directory files under my main user. C:\users\"USERNAME"\
 
 b. In Open Visual Studio Code the same terminal type the code below
+    
     git clone https://github.com/Anthony11989/Copy-Remove-Suffix
 
 ## 6. Adding in your Monday.com API
