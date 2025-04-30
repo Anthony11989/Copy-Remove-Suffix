@@ -51,9 +51,9 @@ b. In Open Visual Studio Code the same terminal type the code below
 ## 6. Adding in your Monday.com API
 a. In Visual Studios Code click File at the upper left, Open FOLDER, and choose the "copy-remove-suffix" folder.
 
-b. Open the .env fild by just clicking on it once.
+b. Open the .env file by just clicking on it once.
 
-c. In Monday.com if you have admin privledges you will click the upper right icon, and click Developers (My Access Tokens) or Administraction (Connections > API)
+c. In Monday.com if you have admin privledges you will click the upper right icon, and click Developers (My Access Tokens) or Administration (Connections > API)
 
 d. Do not share your API Key with anyone... ANYONE!
 
